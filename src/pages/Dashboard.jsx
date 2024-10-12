@@ -202,11 +202,6 @@ function Dashboard() {
 
   return (
     <div className="py-6">
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-[#232F70]">Dashboard</h1>
-        <p className="text-md text-gray-600">Overview of your smart home</p>
-      </div>
-
       <div className="flex flex-wrap gap-6">
         <div className="bg-white p-4 rounded-lg shadow-md flex-1 min-w-[300px]">
           <label htmlFor="energy-view" className="mr-2">
@@ -226,7 +221,7 @@ function Dashboard() {
           <Line data={lineData} options={options} />
         </div>
 
-        <div className="bg-white p-4 rounded-lg shadow-md flex-1 min-w-[300px]">
+        <div className="bg-white p-4 rounded-lg shadow-md flex-1 min-w-[300px] h-full">
           <Bar data={barData} options={options} />
         </div>
       </div>

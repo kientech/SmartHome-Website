@@ -1,9 +1,10 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { RiDashboardLine } from "react-icons/ri";
-import { IoIosTrendingUp } from "react-icons/io";
 import { IoIosCalendar } from "react-icons/io";
 import { RiHome5Line } from "react-icons/ri";
+import { GoInbox } from "react-icons/go";
+import { AiOutlineCoffee, AiOutlineLogout } from "react-icons/ai";
 
 function Sidebar() {
   const location = useLocation();
@@ -22,6 +23,18 @@ function Sidebar() {
     },
     {
       id: 3,
+      name: "Bed room",
+      icon: <GoInbox size={24} />,
+      path: "/bed-room",
+    },
+    {
+      id: 4,
+      name: "Kitchen",
+      icon: <AiOutlineCoffee size={24} />,
+      path: "/kitchen-room",
+    },
+    {
+      id: 5,
       name: "Schedules",
       icon: <IoIosCalendar size={24} />,
       path: "/schedules",
@@ -30,14 +43,14 @@ function Sidebar() {
 
   return (
     <div
-      className="w-[30%] h-full bg-white rounded-xl py-4 px-4"
+      className="w-[30%] h-full bg-white rounded-xl py-4 px-4 flex flex-col"
       style={{ minHeight: `calc(100vh - 4px)` }}
     >
       <div className="mt-2">
         <h1 className="font-bold text-xl text-black text-center">SmartHome</h1>
         <div className="w-full h-[1px] bg-gray-100 my-6"></div>
       </div>
-      <nav className="flex-grow mt-16">
+      <nav className="flex-grow mt-4">
         <ul>
           {navigations.map((item) => (
             <li key={item.id} className="my-4">
@@ -66,6 +79,13 @@ function Sidebar() {
           ))}
         </ul>
       </nav>
+      <Link
+        to={"#"}
+        className="flex items-center gap-2 text-gray-700 hover:text-red-600 mt-auto px-4 py-4 rounded-lg bg-red-100"
+      >
+        <AiOutlineLogout className="text-xl" />
+        <span>Logout</span>
+      </Link>
     </div>
   );
 }

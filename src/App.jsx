@@ -9,6 +9,8 @@ import Header from "./components/Header";
 import Dashboard from "./pages/Dashboard";
 import LivingRoom from "./pages/LivingRoom";
 import Schedules from "./pages/Schedules";
+import BedRoom from "./pages/BedRoom";
+import KitchenRoom from "./pages/KitchenRoom";
 
 const Layout = () => {
   return (
@@ -33,6 +35,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="living-room" element={<LivingRoom />} />
+          <Route path="bed-room" element={<BedRoom />} />
+          <Route path="kitchen-room" element={<KitchenRoom />} />
           <Route path="schedules" element={<Schedules />} />
           <Route path="logout" element={<div>Logging out...</div>} />
         </Route>

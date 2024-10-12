@@ -7,7 +7,7 @@ import { RiMoreLine } from "react-icons/ri";
 import { RiLineChartLine } from "react-icons/ri";
 import { RiDoorClosedLine } from "react-icons/ri";
 
-function LivingRoom() {
+function BedRoom() {
   const [ws, setWs] = useState(null); // WebSocket connection
   const [isDoorOn, setIsDoorOn] = useState(false);
   const [isLamp1On, setIsLamp1On] = useState(false);
@@ -199,7 +199,7 @@ function LivingRoom() {
             <div className="p-2 rounded-lg border border-gray-50 mb-2">
               <RiLightbulbLine size={24} color={isLamp3On ? "#fff" : "#000"} />
             </div>
-            <SwitchToggle onChange={handleLamp3Toggle} onClick={toggleLight3}/>
+            <SwitchToggle onChange={handleLamp3Toggle} onClick={toggleLight3} />
           </div>
           <div className="flex items-center justify-between mt-2">
             <h1
@@ -218,7 +218,7 @@ function LivingRoom() {
 
       <div className="my-4">
         <div className="flex gap-x-4">
-          <div className="flex-1 w-3/4">
+          <div className=" w-3/4">
             <div className="bg-white p-4 rounded-lg">
               <h1 className="mb-2">Living Room Camera</h1>
               <div className="w-full h-[300px] rounded-lg">
@@ -230,7 +230,7 @@ function LivingRoom() {
               </div>
             </div>
 
-            <div className="px-4 py-8 rounded-lg bg-white mt-4 flex-1">
+            <div className="px-4 py-8 rounded-lg bg-white mt-4">
               <h1 className="font-base text-md mb-4">Schedules</h1>
               <div>
                 <div className="grid grid-cols-2 gap-5">
@@ -331,4 +331,4 @@ function LivingRoom() {
   );
 }
 
-export default LivingRoom;
+export default BedRoom;
